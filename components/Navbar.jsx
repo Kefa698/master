@@ -8,7 +8,7 @@ function Navbar() {
 			<Link href="/">Home</Link>
 			<ul className={styles.list}>
 				<li className={styles.listItem}>
-					<Link href="/products.Design">DESIGN</Link>
+					<Link href="/products.design">DESIGN</Link>
 				</li>
 				<li className={styles.listItem}>
 					<Link href="/products.development">DEVELOPMENT</Link>
