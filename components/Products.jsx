@@ -3,7 +3,7 @@ import styles from '..styles/Products.module.css'
 
 function Products() {
   return (
-    <div>Products</div>
+    <div></div>
   )
 }
 
