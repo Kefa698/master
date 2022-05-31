@@ -16,6 +16,7 @@ function Testimonials() {
 						<p className={styles.comment}>{user.comment}</p>
 						<div className={styles.person}>
 							<Image
+							className={styles.avatar}
 								src={`/img/${user.avatar}`}
 								objectFit="cover"
 								width="45"
