@@ -10,7 +10,7 @@ function Intro() {
 			<Circle backgroundColor="pink"  right="-40vh" />
 			<div className={styles.card}>
 				<h1 className={styles.title}>
-					<span className={styles.brand}></span>DIGITAL PRODUCT AGENCY
+					<span className={styles.brand}>Kefa </span>DIGITAL PRODUCT AGENCY
 				</h1>
 				<p className={styles.desc}>
 					Personal/Agency Website | SEO Optimized Responsive Portfolio Website
