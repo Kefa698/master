@@ -1,30 +1,61 @@
-import Link from 'next/link'
-import React from 'react'
-import styles from '../styles/Navbar.module.css'
+import { useState } from 'react';
+import style from '../styles/Navbar.module.css';
+import Link from 'next/link';
 
-function Navbar() {
-  return (
-		<div className={styles.container}>
-			<Link href="/">Home</Link>
-			<ul className={styles.list}>
-				<li className={styles.listItem}>
-					<Link href="/products.design">DESIGN</Link>
+const Navbar = () => {
+	const [open, setOpen] = useState(false);
+
+	return (
+		<div className={style.container}>
+			<Link href="/">HOME</Link>
+			<ul className={style.list}>
+				<li className={style.listItem}>
+					<Link href="/products/design">DESIGN</Link>
 				</li>
-				<li className={styles.listItem}>
-					<Link href="/products.development">DEVELOPMENT</Link>
+				<li className={style.listItem}>
+					<Link href="/products/development">DEVELOPMENT</Link>
 				</li>
-				<li className={styles.listItem}>
-					<Link href="/products.production">PRODUCTION</Link>
+				<li className={style.listItem}>
+					<Link href="/products/production">PRODUCTION</Link>
 				</li>
-				<li className={styles.listItem}>
-					<Link href="/products.photography">PHOTOGRAPHY</Link>
+				<li className={style.listItem}>
+					<Link href="/products/photography">PHOTOGRAPHY</Link>
 				</li>
-				<li className={styles.listItem}>
+				<li className={style.listItem}>
+					<Link href="/contact">CONTACT</Link>
+				</li>
+			</ul>
+			<div className={style.hamburger} onClick={() => setOpen(!open)}>
+				<div className={style.line} />
+				<div className={style.line} />
+				<div className={style.line} />
+			</div>
+			<ul
+				onClick={() => setOpen(false)}
+				className={style.menu}
+				style={{ right: open ? '0px' : '-50vw' }}
+			>
+				<li className={style.menuItem}>
+					<Link href="/">HOME</Link>
+				</li>
+				<li className={style.menuItem}>
+					<Link href="/products/design">DESIGN</Link>
+				</li>
+				<li className={style.menuItem}>
+					<Link href="/products/development">DEVELOPMENT</Link>
+				</li>
+				<li className={style.menuItem}>
+					<Link href="/products/production">PRODUCTION</Link>
+				</li>
+				<li className={style.menuItem}>
+					<Link href="/products/photography">PHOTOGRAPHY</Link>
+				</li>
+				<li className={style.menuItem}>
 					<Link href="/contact">CONTACT</Link>
 				</li>
 			</ul>
 		</div>
 	);
-}
+};
 
-export default Navbar
+export default Navbar;

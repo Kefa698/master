@@ -1,45 +1,37 @@
-import React from 'react';
-import styles from '../styles/Footer.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
+import React from 'react';
+import styles from '../styles/Footer.module.css';
 
 const Footer = () => {
 	return (
 		<div className={styles.container}>
 			<div className={styles.cardL}>
-				<h1 className={styles.title}>AV0CAD0 CREATIVES.</h1>
+				<h1 className={styles.title}>Creatives</h1>
 				<h1 className={styles.linkTitle}>
-					<Link href="/contact" className={styles.link} passHref>
-						<>
-							<span className={styles.linkText}>WORK WITH US</span>
-							<Image
-								src={'/img/link.png'}
-								width="40px"
-								height="40px"
-								alt=""
-							/>
-						</>
-					</Link>
+					<a href="/contact">
+						<span className={styles.linkText}>Work with us</span>
+						<Image src="/img/link.png" height="40px" width="40px" alt="" />
+					</a>
 				</h1>
 			</div>
 			<div className={styles.cardS}>
 				<div className={styles.cardItem}>
-					45 ADAM STREET,
-					<br /> USA
+					Shell MountainViewMall <br />
+					Kenya
 				</div>
 				<div className={styles.cardItem}>
-					CONTACT@kefaisaboke.com
-					<br /> 111_438_5244
+					contact@kefaisaboke.com <br />
+					0712345678
 				</div>
 			</div>
 			<div className={styles.cardS}>
 				<div className={styles.cardItem}>
-					FOLLOW US:
-					<br /> __FB __IN __BE __TW
+					Follow Us: <br />
+					_FB _TW _IN _BE
 				</div>
 				<div className={styles.cardItem}>
-					© 2022 ,
-					<br />
+					@2022 KEFA INTERACTIVE <br />
 					ALL RIGHTS RESERVED
 				</div>
 			</div>

@@ -1,18 +1,18 @@
+import Link from 'next/link';
 import React from 'react';
 import styles from '../styles/Services.module.css';
-import Link from 'next/link';
-import Image from 'next/image'
+import Image from 'next/image';
 
-function Services({ services }) {
+const Services = ({ services }) => {
 	return (
 		<div className={styles.container}>
-			<h1 className={styles.title}>What Can We Do ?</h1>
+			<h1 className={styles.title}>What we can do </h1>
 			<h1 className={styles.subtitle}>Services we can help you with</h1>
 			<div className={styles.services}>
 				{services.map((service) => (
-					<Link passHref key={service.id} href={`/product/${service.name}`}>
+					<Link passHref key={service.id} href={`/products/${service.name}`}>
 						<div className={styles.service}>
-              <div className={styles.desc}>{service.desc}</div>
+							<div className={styles.desc}>{service.desc}</div>
 							<span className={styles.cat}>{service.title}</span>
 							<div className={styles.media}>
 								{service.video ? (
@@ -26,11 +26,11 @@ function Services({ services }) {
 								) : (
 									<Image
 										src={`/img/${service.photo}`}
-										alt=""
 										width="100%"
-										height="100%"
+										height="100"
 										layout="responsive"
 										objectFit="cover"
+										alt=""
 									/>
 								)}
 							</div>
@@ -40,6 +40,6 @@ function Services({ services }) {
 			</div>
 		</div>
 	);
-}
+};
 
 export default Services;
